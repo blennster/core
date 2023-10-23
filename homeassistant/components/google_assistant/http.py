@@ -135,7 +135,7 @@ class GoogleConfig(AbstractConfig):
 
         explicit_expose = self.entity_config.get(state.entity_id, {}).get(CONF_EXPOSE)
 
-        if type(explicit_expose) is bool:
+        if isinstance(explicit_expose, bool):
             return explicit_expose
 
         domain_exposed_by_default = (
